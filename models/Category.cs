@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ipdp.models
+namespace IPDP_Stefan.models
 {
     public class Category
     {

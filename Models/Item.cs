@@ -1,7 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ipdp.models
+namespace IPDP_Stefan.models
 {
     public class Item
     {
@@ -18,6 +19,13 @@ namespace ipdp.models
         public Category Category { get; set; }
 
         public DateTime ModifiedAt { get; set; }
+
+        public Location Location { get; set; }
+
+        public string InventoryNumber { get; set; }
+
+        public DateTime CreationDate { get; set; }
+
 
 
     }

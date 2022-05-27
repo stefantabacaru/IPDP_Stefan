@@ -1,8 +1,9 @@
-﻿//using Licenta.Models;
+﻿
+using IPDP_Stefan.models;
 using Microsoft.EntityFrameworkCore;
-//using Responsibility = Licenta.Models.Responsibility;
 
-namespace Licenta.Context
+
+namespace IPDP_Stefan.Context
 {
   public class ContextDb : DbContext
   {
@@ -11,7 +12,13 @@ namespace Licenta.Context
 
 
         }
-      //  public DbSet<User> Users { get; set; }
+        public DbSet<Category> Category { get; set; }
 
-  }
-}
+        public DbSet<Item> Item { get; set; }
+
+        public DbSet<Location> Location { get; set; }
+
+        public DbSet<User> User { get; set; }
+
+    }
+} 

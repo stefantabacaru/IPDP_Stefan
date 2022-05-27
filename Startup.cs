@@ -1,8 +1,12 @@
-using Licenta.Context;
+using IPDP_Stefan.Context;
+using IPDP_Stefan.Interfaces;
+using IPDP_Stefan.Services;
+//using Licenta.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -37,6 +41,10 @@ namespace IPDP_Stefan
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "IPDP_Stefan", Version = "v1" });
             });
+            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<ILocationService, LocationService>();
+            services.AddScoped<IItemService, ItemService>();
+            services.AddScoped<IUserService, UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
